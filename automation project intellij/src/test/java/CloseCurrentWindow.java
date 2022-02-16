@@ -11,6 +11,6 @@ public class CloseCurrentWindow {
         driver.findElement(By.id("new-tab-button")).click();
         Thread.sleep(5000);
         driver.close(); //functia close inchide tab-ul activ
-        
+
     }
 }
