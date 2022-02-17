@@ -8,11 +8,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Autocomplete {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:/Users/40723/Desktop/ProiectSDA_Modul8/chromedriver.exe");
-// la linia 3 i-am spus sistemului unde sa gaseasca driverul
+         System.setProperty("webdriver.chrome.driver", "C:/Users/40723/Desktop/ProiectSDA_Modul8/chromedriver.exe");
+        // la linia 3 i-am spus sistemului unde sa gaseasca driverul
+      //  WebDriverManager.chromedriver("webdriver.chrome.driver").setup("C:/Users/40723/Desktop/ProiectSDA_Modul8/chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();                               // Aici am creat un nou obiect al clasei chrome driver care se numeste driver si care are tipul de date webdriver.
-        driver.get("https://formy-project.herokuapp.com/autocomplete");      // aici am deschis link-ul soecificat intre paranteze
+        driver.get("https://formy-project.herokuapp.com/autocomplete");      // aici am deschis link-ul specificat intre paranteze
         WebElement autocomplete = driver.findElement(By.id("autocomplete")); // identificam prin intermediul id-ului elementul text box in care se poate introduce adresa
                                                                              // elementul identificat este salvat intr-o variabila numita "autocomplete" care are tipul de date WebElement
         autocomplete.sendKeys("Strada Iancu Gontea nr. 177");
